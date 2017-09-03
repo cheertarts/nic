@@ -2,7 +2,7 @@
 a=$(</dev/stdin)
 
 if [[ $(tput lines) -lt $(echo "$a" | wc -l) ]]; then
-  echo "$a" | less
+  echo "$a" | less "$@"
 else
   echo "$a"
 fi
