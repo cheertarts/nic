@@ -1,7 +1,7 @@
 #!/bin/bash
 a=$(</dev/stdin)
 
-if [[ $(tput lines) < $(echo "$a" | wc -l) ]]; then
+if [[ $(tput lines) -lt $(echo "$a" | wc -l) ]]; then
   echo "$a" | less
 else
   echo "$a"
