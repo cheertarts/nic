@@ -1,5 +1,5 @@
 #!/bin/bash
-a="$(</dev/stdin)"
+a=$(</dev/stdin)
 
 if [[ $(tput lines) < $(echo "$a" | wc -l) ]]; then
   echo "$a" | less
